@@ -1,0 +1,51 @@
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 100rem;
+    margin: 0 auto;
+}
+
+main table {
+    border-spacing: 0.1rem;
+    margin-top: 5rem;
+    border: solid 0.1rem #F0F0F0;
+}
+
+main table thead {
+    background-color: var(--green);
+    color: #fff;
+    text-transform: capitalize;
+    border: 0;
+}
+
+main table thead tr th {
+    font-size: 1.8rem;
+}
+
+main table tbody tr:nth-child(odd){
+    background-color: #F0F0F0;
+}
+
+main table th, td {
+    padding: 1rem;
+}
+
+main table tbody tr td:nth-child(1) {
+    text-align: center;
+}
+
+.add-btn {
+    background-color: var(--blue);
+    color: #fff;
+    line-height: 4rem;
+    display: block;
+    margin: 3rem auto;
+    width: 20rem;
+    text-align: center;
+}
+
+.modify-icon:before {
+    content: '\1F589';
+    font-size: 2rem;
+}

@@ -1,0 +1,16 @@
+.delete-btn {
+    display: flex;
+    align-items: center;
+    border-top: solid .1rem var(--grey);
+    border-bottom: solid .1rem var(--grey);
+    height: 10rem;
+    margin-top: 3rem;
+}
+
+main p a {
+    background-color: var(--red);
+    width: 19rem;
+    margin: 0;
+    margin-left: 1.5rem;
+    text-align: center;
+}
