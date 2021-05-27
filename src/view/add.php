@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./public/css/reset.css">
     <link rel="stylesheet" href="./public/css/header.css">
     <link rel="stylesheet" href="./public/css/form.css">
+    <link rel="icon" type="image/x-icon" href="./public/assets/icon.ico"/>
 </head>
 <body>
     <?php include_once("./src/view/header.html") ?>
@@ -28,8 +29,8 @@
             <input type="text" id="firstname" name="firstname">
             <label for="age">Age:</label>
             <input type="number" id="age" name="age">
-            <label for="mail">Adresse mail:</label>
-            <input type="mail" id="mail" name="mail">
+            <label for="email">Adresse mail:</label>
+            <input type="email" id="email" name="email">
             <button type="submit">Créer</button>
         </form>
     </main>

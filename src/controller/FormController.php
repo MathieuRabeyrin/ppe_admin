@@ -13,7 +13,7 @@
 
         public function isValid()
         {
-            $fields = ["lastname", "firstname", "age", "mail"];
+            $fields = ["lastname", "firstname", "age", "email"];
 
             foreach ($fields as $field) {
                 if (empty($this->form[$field])) {
@@ -31,7 +31,7 @@
                 $this->form["lastname"],
                 $this->form["firstname"],
                 $this->form["age"],
-                $this->form["mail"],
+                $this->form["email"],
             );
         }
 
@@ -43,7 +43,7 @@
                 $this->form["lastname"],
                 $this->form["firstname"],
                 $this->form["age"],
-                $this->form["mail"],
+                $this->form["email"],
             ); 
         }
     }

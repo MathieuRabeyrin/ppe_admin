@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./public/css/reset.css">
     <link rel="stylesheet" href="./public/css/header.css">
     <link rel="stylesheet" href="./public/css/dashboard.css">
+    <link rel="icon" type="image/x-icon" href="./public/assets/icon.ico"/>
 </head>
 <body>
     <?php include_once("./src/view/header.html") ?>
@@ -32,7 +33,7 @@
                     for ($i = 0; $i < sizeof($users); $i++) {
                         echo "<tr>";
                         foreach ($users[$i] as $key => $value ) {
-                            if ($key == "id_client")
+                            if ($key == "id")
                                 echo "<td><a href='?action=modifyForm&id=$value' class='modify-icon'> Modifier</a> ou <a href='?action=delete&id=$value'>&#10060; supprimer</a></td>";
                             else
                                 echo "<td>$value</td>";

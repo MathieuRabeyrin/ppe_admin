@@ -12,13 +12,13 @@
 
         public function getAllUsers()
         {
-            $response = $this->db->query("SELECT * FROM clients");
+            $response = $this->db->query("SELECT * FROM customers");
             return $response->fetchAll();
         }
 
         public function getUser($id)
         {
-            $query = $this->db->prepare("SELECT * FROM clients WHERE id_client = ?");
+            $query = $this->db->prepare("SELECT * FROM customers WHERE id = ?");
             $query->bindValue(1, $id, PDO::PARAM_INT);
             $query->execute();
             return $query->fetch();
@@ -26,31 +26,31 @@
 
         public function deleteUser($id)
         {
-            $query = $this->db->prepare("DELETE FROM clients WHERE id_client = ?");
+            $query = $this->db->prepare("DELETE FROM customers WHERE id = ?");
             $query->bindValue(1, $id, PDO::PARAM_INT);
             $query->execute();
             return $query;
         }
 
-        public function addUser($lastname, $firstname, $age, $mail)
+        public function addUser($lastname, $firstname, $age, $email)
         {
-            $query = $this->db->prepare("INSERT INTO clients (nom, prenom, age, email) VALUES (:lastname, :firstname, :age, :mail)");
+            $query = $this->db->prepare("INSERT INTO customers (lastname, firstname, age, email) VALUES (:lastname, :firstname, :age, :email)");
             $query->bindParam(":lastname", $lastname, PDO::PARAM_STR);
             $query->bindParam(":firstname", $firstname, PDO::PARAM_STR);
             $query->bindParam(":age", $age, PDO::PARAM_INT);
-            $query->bindParam(":mail", $mail, PDO::PARAM_STR);
+            $query->bindParam(":email", $email, PDO::PARAM_STR);
             $query->execute();
             return $query;
         }
 
-        public function updateUser($id, $lastname, $firstname, $age, $mail)
+        public function updateUser($id, $lastname, $firstname, $age, $email)
         {
-            $query = $this->db->prepare("UPDATE clients SET nom = :lastname, prenom = :firstname, age = :age, email = :mail WHERE id_client = :id");
+            $query = $this->db->prepare("UPDATE customers SET lastname = :lastname, firstname = :firstname, age = :age, email = :email WHERE id = :id");
             $query->bindParam(":id", $id, PDO::PARAM_INT);
             $query->bindParam(":lastname", $lastname, PDO::PARAM_STR);
             $query->bindParam(":firstname", $firstname, PDO::PARAM_STR);
             $query->bindParam(":age", $age, PDO::PARAM_INT);
-            $query->bindParam(":mail", $mail, PDO::PARAM_STR);
+            $query->bindParam(":email", $email, PDO::PARAM_STR);
             $query->execute();
             return $query;
         }
