@@ -15,7 +15,7 @@
     <link rel="icon" type="image/x-icon" href="./public/assets/icon.ico"/>
 </head>
 <body>
-    <?php include_once("./src/view/header.html") ?>
+    <?php include_once("./public/header.html") ?>
     <main>
         <form action="?action=add" method="POST">
             <a href="./">voir la liste des utilisateurs &#8250;</a>
