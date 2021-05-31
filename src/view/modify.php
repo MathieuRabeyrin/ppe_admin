@@ -17,23 +17,23 @@
 <body>
     <?php include_once("./public/header.html") ?>
     <main>
-        <form action="./?action=update&id=<?php echo $user["id"] ?>" method="POST">
+        <form action="./?action=update&id=<?php echo $user["id_client"] ?>" method="POST">
             <a href="./">voir la liste des utilisateurs &#8250;</a>
             <?php
                 if (!empty($_SESSION["error"]))
                     echo "<p class='warning'>".$_SESSION['error']."</p>";
             ?>
             <label for="lastname">Nom:</label>
-            <input type="text" id="lastname" name="lastname" value="<?php echo $user["lastname"] ?>" autofocus>
+            <input type="text" id="lastname" name="lastname" value="<?php echo $user["nom"] ?>" autofocus>
             <label for="firstname">Prénom:</label>
-            <input type="text" id="firstname" name="firstname" value="<?php echo $user["firstname"] ?>">
+            <input type="text" id="firstname" name="firstname" value="<?php echo $user["prenom"] ?>">
             <label for="age">Age:</label>
             <input type="number" id="age" name="age" value="<?php echo $user["age"] ?>">
             <label for="email">Adresse mail:</label>
             <input type="email" id="email" name="email" value="<?php echo $user["email"] ?>">
             <button type="submit">Mettre à jour </button>
         </form>
-        <p class="delete-btn"><a href="?action=delete&id=<?php echo $user["id"] ?>">Supprimer &#10005;</a></p>
+        <p class="delete-btn"><a href="?action=delete&id=<?php echo $user["id_client"] ?>">Supprimer &#10005;</a></p>
     </main>
 </body>
 </html>

@@ -12,13 +12,13 @@
 
         public function getAllUsers()
         {
-            $response = $this->db->query("SELECT * FROM customers");
+            $response = $this->db->query("SELECT * FROM clients");
             return $response->fetchAll();
         }
 
         public function getUser($id)
         {
-            $query = $this->db->prepare("SELECT * FROM customers WHERE id = ?");
+            $query = $this->db->prepare("SELECT * FROM clients WHERE id_client = ?");
             $query->bindValue(1, $id, PDO::PARAM_INT);
             $query->execute();
             return $query->fetch();
@@ -26,7 +26,7 @@
 
         public function deleteUser($id)
         {
-            $query = $this->db->prepare("DELETE FROM customers WHERE id = ?");
+            $query = $this->db->prepare("DELETE FROM clients WHERE id_client = ?");
             $query->bindValue(1, $id, PDO::PARAM_INT);
             $query->execute();
             return $query;
@@ -34,7 +34,7 @@
 
         public function addUser($lastname, $firstname, $age, $email)
         {
-            $query = $this->db->prepare("INSERT INTO customers (lastname, firstname, age, email) VALUES (:lastname, :firstname, :age, :email)");
+            $query = $this->db->prepare("INSERT INTO clients (nom, prenom, age, email) VALUES (:lastname, :firstname, :age, :email)");
             $query->bindParam(":lastname", $lastname, PDO::PARAM_STR);
             $query->bindParam(":firstname", $firstname, PDO::PARAM_STR);
             $query->bindParam(":age", $age, PDO::PARAM_INT);
@@ -45,7 +45,7 @@
 
         public function updateUser($id, $lastname, $firstname, $age, $email)
         {
-            $query = $this->db->prepare("UPDATE customers SET lastname = :lastname, firstname = :firstname, age = :age, email = :email WHERE id = :id");
+            $query = $this->db->prepare("UPDATE clients SET nom = :lastname, prenom = :firstname, age = :age, email = :email WHERE id_client = :id");
             $query->bindParam(":id", $id, PDO::PARAM_INT);
             $query->bindParam(":lastname", $lastname, PDO::PARAM_STR);
             $query->bindParam(":firstname", $firstname, PDO::PARAM_STR);

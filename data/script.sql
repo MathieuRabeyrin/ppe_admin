@@ -1,12 +1,12 @@
-CREATE DATABASE league_customers;
+CREATE DATABASE client_ligue;
 
-USE league_customers;
+USE client_ligue;
 
-CREATE TABLE customers
+CREATE TABLE clients
 (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    lastname VARCHAR(255) NOT NULL,
-    firstname VARCHAR(255) NOT NULL,
+    id_client INT PRIMARY KEY AUTO_INCREMENT,
+    nom VARCHAR(255) NOT NULL,
+    prenom VARCHAR(255) NOT NULL,
     age INT NOT NULL,
     email VARCHAR(320) NOT NULL
 );
