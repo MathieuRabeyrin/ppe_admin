@@ -31,7 +31,7 @@
             <input type="number" id="age" name="age">
             <label for="email">Adresse mail:</label>
             <input type="email" id="email" name="email">
-            <button type="submit">Créer</button>
+            <button type="submit">Créer <span class='penSize'>&#x1F58B;</span></button>
         </form>
     </main>
 </body>

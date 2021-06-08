@@ -34,7 +34,7 @@
                         echo "<tr>";
                         foreach ($users[$i] as $key => $value ) {
                             if ($key == "id_client")
-                                echo "<td><a href='?action=modifyForm&id=$value' class='modify-icon'> Modifier</a> ou <a href='?action=delete&id=$value'>&#10060; supprimer</a></td>";
+                                echo "<td><a href='?action=modifyForm&id=$value'><span class='penSize'>&#x1F58B;</span> Modifier</a> ou <a href='?action=delete&id=$value'>&#10060; supprimer</a></td>";
                             else
                                 echo "<td>$value</td>";
                         }

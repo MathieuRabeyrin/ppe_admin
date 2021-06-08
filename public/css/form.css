@@ -53,12 +53,6 @@ form button:hover {
     cursor: pointer;
 }
 
-form button::after {
-    content: '\1F589';
-    color: #fff;
-    margin-left: 1rem;
-}
-
 .warning {
     background-color: var(--red);
     color: #fff;

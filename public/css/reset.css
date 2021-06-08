@@ -41,3 +41,7 @@ button {
 * {
     box-sizing: border-box;
 }
+
+.penSize {
+    font-size: 2rem;
+}

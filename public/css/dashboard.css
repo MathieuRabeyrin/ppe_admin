@@ -44,8 +44,3 @@ main table tbody tr td:nth-child(1) {
     width: 20rem;
     text-align: center;
 }
-
-.modify-icon:before {
-    content: '\1F589';
-    font-size: 2rem;
-}

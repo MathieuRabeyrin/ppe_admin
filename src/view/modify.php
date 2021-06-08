@@ -31,7 +31,7 @@
             <input type="number" id="age" name="age" value="<?php echo $user["age"] ?>">
             <label for="email">Adresse mail:</label>
             <input type="email" id="email" name="email" value="<?php echo $user["email"] ?>">
-            <button type="submit">Mettre à jour </button>
+            <button type="submit">Mettre à jour <span class='penSize'>&#x1F58B;</span></button>
         </form>
         <p class="delete-btn"><a href="?action=delete&id=<?php echo $user["id_client"] ?>">Supprimer &#10005;</a></p>
     </main>
